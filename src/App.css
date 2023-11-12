@@ -7,6 +7,9 @@
   justify-content: center;
 }
 
+.container {
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
@@ -29,4 +32,40 @@ button {
 button {
   width: 8rem;
   background-color: rgb(0, 217, 255);
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+/* GetUsers */
+
+.user-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+  align-items: start;
+  justify-content: start;
+  height: 8rem;
+  width: 15rem;
+  border-radius: 10px;
+  border: 1px solid rgb(40, 42, 141);
+  margin-bottom: 1rem;
+  background-color: rgb(187, 208, 230);
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
 }

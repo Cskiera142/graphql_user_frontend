@@ -10,7 +10,8 @@ function NewUserForm() {
 
   const [createUser, { error }] = useMutation(CREATE_USER_MUTATION);
 
-  const addUser = () => {
+  const addUser = (e) => {
+    e.preventDefault();
     createUser({
       variables: {
         firstName: firstName,
@@ -18,17 +19,14 @@ function NewUserForm() {
         email: email,
         password: password,
       },
-    }).then((result) => {
-      console.log("Mutation result:", result);
-
-      if (error) {
-        console.log(error);
-      }
     });
-  };
 
+    if (error) {
+      console.log(error);
+    }
+  };
   return (
-    <div className="input-container">
+    <div>
       <input
         type="text"
         placeholder="First Name"
